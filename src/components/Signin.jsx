@@ -35,17 +35,21 @@ const Signin = () => {
         <div className="flex flex-col py-4">
           <input
             onChange={(e) => setEmail(e.target.value)}
-            className="p-3 mt-4 bg-black"
+            className="p-3 mt-4 bg-[#191919]"
             type="email"
             placeholder="Email"
           />
           <input
             onChange={(e) => setPassword(e.target.value)}
-            className="p-3 mt-4 bg-black"
+            className="p-3 mt-4 bg-[#191919] "
             type="password"
             placeholder="password"
           />
-          <button type="submit" disabled={loading} className="mt-4">
+          <button
+            type="submit"
+            disabled={loading}
+            className="mt-4 border px-4 py-3 hover:bg-blue-400 hover:border-blue-400 hover:text-white hover:font-semibold"
+          >
             Sign In
           </button>
           {error && <p className="text-red-600 text-center pt-4">{error}</p>}
